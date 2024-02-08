@@ -22,7 +22,6 @@ public class BallMovement : MonoBehaviour
     {
         rb=GetComponent<Rigidbody2D>();
         objMesh = GetComponent<SpriteRenderer>();
-        rb.AddForce(new Vector2(4,10),ForceMode2D.Impulse);
         coll = GetComponent<CircleCollider2D>();
     }
 

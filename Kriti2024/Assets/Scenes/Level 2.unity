@@ -575,7 +575,7 @@ Transform:
   m_GameObject: {fileID: 1674918784}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.55, y: -9.52, z: -10}
+  m_LocalPosition: {x: 1.52, y: 0.53, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3295,13 +3295,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 5127651852126541502, guid: 97f3cc29aa326a8488668b546d726114, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7217617544626029847, guid: 97f3cc29aa326a8488668b546d726114, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.36
+      value: 1.57
       objectReference: {fileID: 0}
     - target: {fileID: 7217617544626029847, guid: 97f3cc29aa326a8488668b546d726114, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.04
+      value: 3.36
       objectReference: {fileID: 0}
     - target: {fileID: 7217617544626029847, guid: 97f3cc29aa326a8488668b546d726114, type: 3}
       propertyPath: m_LocalPosition.z
