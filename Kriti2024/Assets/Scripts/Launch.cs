@@ -4,7 +4,8 @@ public class Launch : MonoBehaviour
 {
     private bool launchable = false;
     private Rigidbody2D PlayerRB2D , MuzzleRB2D;
-    private Transform PlayerTransform2D, MuzzlePointTransform2D, BallLauncherTransform2D;
+    private Transform PlayerTransform2D, BallLauncherTransform2D;
+    [SerializeField] private Transform MuzzlePointTransform2D;
     Renderer ren;
     public float ballVelocity = 0.01f;
     private Quaternion ballLauncherAngle;
@@ -20,8 +21,7 @@ public class Launch : MonoBehaviour
         ren.enabled=true;
         PlayerRB2D = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         PlayerTransform2D = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        MuzzlePointTransform2D = GameObject.FindGameObjectWithTag("MuzzlePoint").GetComponent<Transform>();
-        BallLauncherTransform2D = GameObject.FindGameObjectWithTag("BallLauncher").GetComponent<Transform>();
+        BallLauncherTransform2D = GetComponent<Transform>();
         lr = GetComponent<LineRenderer>();
         
     }
