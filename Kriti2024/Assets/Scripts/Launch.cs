@@ -23,7 +23,7 @@ public class Launch : MonoBehaviour
         PlayerTransform2D = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         BallLauncherTransform2D = GetComponent<Transform>();
         lr = GetComponent<LineRenderer>();
-        
+        lr.enabled = false;
     }
 
     private void Update(){
@@ -44,6 +44,7 @@ public class Launch : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && launchable){
                 launchable = false;
                 ren.enabled = true;
+                lr.enabled = false;
                 PlayerRB2D.gravityScale += 1.0f;
                 
                 x_component = direction.x/100*ballVelocity;
@@ -63,6 +64,7 @@ public class Launch : MonoBehaviour
         {
             launchable = true;
             ren.enabled=false;
+            lr.enabled = true;
         }
     }
 
