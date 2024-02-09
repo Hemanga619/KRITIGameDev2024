@@ -9,15 +9,11 @@ public class BallMovement : MonoBehaviour
    
     int collisionAfterPowerUp = 0;
     private Vector3 originalVelocity;
-    [SerializeField] private Transform portalPosition;
     private SpriteRenderer objMesh;
-   [HideInInspector] public  bool isTeleport = false;
-    public  Vector3 finalPosition;
-   [HideInInspector] public  Vector3 initialPosition;
-  public CircleCollider2D coll;
+    [HideInInspector] public  bool isTeleport = false;
+    [HideInInspector] public  Vector3 initialPosition;
+    public CircleCollider2D coll;
     
-    
-    // Start is called before the first frame update
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
@@ -25,7 +21,6 @@ public class BallMovement : MonoBehaviour
         coll = GetComponent<CircleCollider2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {       
         if(collisionAfterPowerUp>0)
@@ -50,17 +45,6 @@ public class BallMovement : MonoBehaviour
         PowerUpStart();
         other.gameObject.SetActive(false);
         Invoke(nameof(PowerUpEnd),timeLeft);
-       }  
-       if(other.gameObject.CompareTag("Portal"))
-       {
-        isTeleport = true;
-        initialPosition = transform.position;
-        originalVelocity = rb.velocity;
-        rb.velocity = Vector2.zero;
-        rb.gravityScale  = 0;
-        objMesh.enabled = false;
-        Invoke("TeleportFinal",FindObjectOfType<CamFollow>().teleportTime);
-        
        }    
     }
    
@@ -90,13 +74,5 @@ public class BallMovement : MonoBehaviour
         }
         
 
-    }
-    private void TeleportFinal()
-    {
-        transform.position = finalPosition;
-        isTeleport=false;
-        rb.gravityScale = 1f;
-        rb.velocity = originalVelocity;
-        objMesh.enabled = true;
     }
 }
