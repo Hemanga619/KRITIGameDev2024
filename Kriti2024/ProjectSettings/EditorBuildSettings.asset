@@ -32,8 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: a4a94b9e3a2ea39479bf8aaf87090152
-  - enabled: 1
-    path: Assets/Scenes/pauseMenu.unity
+  - enabled: 0
+    path: Assets/Scenes/Level 5.unity
     guid: 409bae841f5361947ab7efad8ceb95bf
   - enabled: 1
     path: Assets/Scenes/Level 7.unity
