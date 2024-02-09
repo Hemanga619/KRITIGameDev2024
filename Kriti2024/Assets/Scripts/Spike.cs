@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spike : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class Spike : MonoBehaviour
         if (other.gameObject.layer == 6)
         {
             Destroy(other.gameObject);
+            MainMenuScript.levelIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(2);
         }
     }
 }

@@ -17,6 +17,7 @@ public class NextLevel : MonoBehaviour
 
     private void LoadNextLevel()
     {
+        MainMenuScript.levelIndex += 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); ;
     }
 }

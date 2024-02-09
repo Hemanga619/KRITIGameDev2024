@@ -3,20 +3,34 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
+    public static int levelIndex = 0;
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        levelIndex = 3;
+        SceneManager.LoadScene(3);
     }
     public void OptionsButton()
     {
-        SceneManager.LoadScene(8);
+        levelIndex = 1;
+        SceneManager.LoadScene(1);
     }
     public void CreditsButton()
     {
-        SceneManager.LoadScene(9);
+        levelIndex = 8;
+        SceneManager.LoadScene(8);
     }
     public void QuitButton()
     {
         Application.Quit();
+    }
+    public void Back()
+    {
+        levelIndex = 0;
+        SceneManager.LoadScene(0);
+    }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene(levelIndex);
     }
 }
